@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="#D0D0D0" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp" >
+
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="150dp" >
+
+ 			<WebView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:scrollbarStyle="insideOverlay"
+                android:text="@string/image" />
+            <WebView
+                android:layout_below="@+id/image"
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+               	android:scrollbarStyle="insideOverlay"
+                android:text="@string/desc" />
+
+            <ImageView
+                android:id="@+id/authorimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/desc"
+                android:src="@drawable/profile"/>
+
+         	<TextView
+         	    android:id="@+id/author"
+         	    android:layout_width="wrap_content"
+         	    android:layout_height="wrap_content"
+         	    android:layout_alignParentRight="true"
+         	    android:layout_below="@+id/authorimage"
+         	    android:text="Sample" />
+
+         	<WebView
+         	    android:id="@+id/comments"
+         	    android:layout_width="wrap_content"
+         	    android:layout_height="wrap_content"
+         	    android:layout_alignLeft="@+id/desc"
+         	    android:background="#123445"
+         	    android:layout_below="@+id/author" />
+
+        </RelativeLayout>
+        "
+    </ScrollView>
+		
+</RelativeLayout>

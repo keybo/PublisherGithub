@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<Preference 
+        android:title="@string/settings_update"
+        android:summary="@string/settings_updateSummary"  >
+        <intent 
+            android:targetPackage="it.gmariotti.android.examples.preference"
+            android:targetClass="it.gmariotti.android.examples.preference.PreferencesActivityABSScenario4"
+            android:action="prefs_update" >
+         </intent>
+    </Preference>
+    
+	 <Preference 
+        android:title="@string/settings_display"
+        android:summary="@string/settings_displaySummary"  >
+        <intent 
+            android:targetPackage="it.gmariotti.android.examples.preference"
+            android:targetClass="it.gmariotti.android.examples.preference.PreferencesActivityABSScenario4"
+            android:action="prefs_display">
+        </intent>
+    </Preference>
+    
+    <Preference 
+        android:title="@string/settings_notify">
+        <intent 
+            android:targetPackage="it.gmariotti.android.examples.preference"
+            android:targetClass="it.gmariotti.android.examples.preference.PreferencesActivityABSScenario4"
+            android:action="prefs_display">
+        </intent>
+    </Preference>
+	
+</PreferenceScreen>

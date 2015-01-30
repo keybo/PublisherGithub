@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.publisherarticle"
+    android:versionCode="1"
+    android:versionName="1.0">
+   <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+ <uses-permission android:name="android.permission.INTERNET" />
+  
+   <uses-permission android:name="android.permission.INTERNET" />
+     <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+      <permission
+        android:name="com.example.publisherarticle.permission.C2D_MESSAGE" 
+        android:protectionLevel="signature" />
+     <uses-permission android:name="com.example.publisherarticle.permission.C2D_MESSAGE" />
+     
+     <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+ 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock">
+   		<activity
+            android:name="com.example.publisherarticle.SplashActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- For Disqus -->
+        <activity android:name="com.example.publisherarticle.ArticleComments"/>
+         <activity android:name="com.example.publisherinterview.InterviewComments"/>
+         <!-- For Article -->
+        <activity android:name="com.example.publisherarticle.ListActivityOne"
+            android:label="@string/list_of_article"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+        <activity android:name="com.example.publisherarticle.DetailActivity"
+            android:label="@string/detail_of_article"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+        
+        <!-- For Interview -->
+        <activity android:name="com.example.publisherinterview.Detail_Int_Activity"
+            android:label="@string/detail_of_interview"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+        <activity android:name="com.example.publisherinterview.List_Int_Activity"
+             	   android:label="@string/list_of_interviews"
+             	   android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+         <activity android:name="com.example.publisherinterview.Splash_Int_Activity"
+              android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"/>
+        <!-- For Video -->
+        <activity android:name="com.example.publisher.PublisherDetail"
+            android:label="@string/detail_of_video"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+        <activity android:name="com.example.publisher.VideoAct"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+        <activity android:name="com.example.publisher.PublisherList"
+             	   android:label="@string/list_of_video"
+             	   android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+         <activity android:name="com.example.publisher.PublisherSplash"
+             android:theme="@style/Theme.Sherlock.Light.DarkActionBar"/>
+         
+         <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.example.publisherarticle" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.example.publisherarticle.GCMIntentService" 
+             android:enabled="true"/>
+    </application>
+
+</manifest>

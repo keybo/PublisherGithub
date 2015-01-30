@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.publisherarticle"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+ <!-- for GCM -->
+ 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+    <permission android:name="com.example.publisherarticle.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.example.publisherarticle.permission.C2D_MESSAGE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/salescloud"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+          
+            android:name="com.example.publisherarticle.SplashActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.publisherarticle.ListActivityOne"
+            android:label="@string/list_of_article"/>
+        <activity android:name="com.example.publisherarticle.DetailActivity"
+            android:label="@string/detail_of_article"/>
+        
+        <!-- For Interview -->
+        <activity android:name="com.example.publisherinterview.Detail_Int_Activity"
+            android:label="@string/detail_of_interview"/>
+        <activity android:name="com.example.publisherinterview.List_Int_Activity"
+             	   android:label="@string/list_of_interviews"/>
+         <activity android:name="com.example.publisherinterview.Splash_Int_Activity"/>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, LooserSample!</string>
+    <string name="app_name">Publisher</string>
+     <string name="settings_font_size">Text size</string>
+     <string name="settings_widget_background_description">Color and transparency of the widget
+        background
+    </string>
+     <string name="settings_widget_background">Background</string>
+      <string-array name="settings_font_sizes">
+        <item>Standard</item>
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+       
+    </string-array>
+     <string-array name="settings_font_size_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+     <string name="settings_visible_feeds">Visible feeds</string>
+     <string name="all_feeds">All feeds (incl. future)</string>
+     <string name="menu_star">Star</string>
+    <string name="menu_unstar">Unstar</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_full_screen">Full screen</string>
+    <string name="menu_copy_clipboard">Copy link</string>
+    <string name="menu_mark_as_unread">Mark as unread</string>
+</resources>

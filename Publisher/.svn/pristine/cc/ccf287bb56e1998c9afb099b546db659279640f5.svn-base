@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    	<item android:id="@+id/socialshare"
+          android:icon="@drawable/social_share"
+           android:showAsAction="ifRoom|withText"
+          android:title="@string/share"
+          android:actionProviderClass="android.widget.ShareActionProvider"/>
+       	<item 
+       	  android:id="@+id/usercomment"
+          android:icon="@drawable/usercomment"
+          android:title="@string/comment"
+          android:showAsAction="ifRoom|withText"/>
+       	<item 
+       	    android:id="@+id/rate"
+       	    android:title="@string/favo"
+          android:icon="@drawable/rating_not_important"
+          android:showAsAction="ifRoom|withText"/>
+         
+         
+</menu>
